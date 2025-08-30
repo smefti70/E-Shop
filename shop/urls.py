@@ -24,7 +24,6 @@ urlpatterns = [
     path('payment/success/<int:order_id>/', views.payment_success, name='payment_success'),
     path('payment/fail/<int:order_id>/', views.payment_fail, name='payment_fail'),
     path('payment/cancel/<int:order_id>/', views.payment_cancel, name='payment_cancel'),
-
     path('verify-email/<uidb64>/<token>/', views.verify_email, name='verify_email'),
     path('email-verification-sent/', views.email_verification_sent, name='email_verification_sent'),
     path('profile/', views.profile, name='profile'),
