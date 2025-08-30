@@ -262,7 +262,7 @@
                     <span class="me-2">Active filters:</span>
                     {% if request.GET.min_price or request.GET.max_price %}
                     <span class="filter-pill">
-                        Price: ৳{{ request.GET.min_price|default:min_price }} - ৳{{ request.GET.max_price|default:max_price }}
+                        Price: ৳{{ request.GET.min_price|default:min_price|floatformat:2 }} - ৳{{ request.GET.max_price|default:max_price|floatformat:2 }}
                     </span>
                     {% endif %}
                     
@@ -334,8 +334,8 @@
                                     </div>
                                 </div>
                                 <div class="price-values">
-                                    <span>৳{{ min_price }}</span>
-                                    <span>৳{{ max_price }}</span>
+                                    <span>৳{{ min_price|floatformat:2 }}</span>
+                                    <span>৳{{ max_price|floatformat:2 }}</span>
                                 </div>
                             </div>
                         </div>
